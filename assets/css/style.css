@@ -1,0 +1,13 @@
+body {
+    background-image: url(../../assets/images/background-15226_960_720.jpg);
+}
+
+h3 {
+    background-color: pink;
+    display: inline;
+}
+
+h5 {
+    background-color: darkseagreen;
+    display: inline;
+}

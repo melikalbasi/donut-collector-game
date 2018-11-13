@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Crystal Collector</title>
+    <title>Donut Collector</title>
     <!-- link to jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- link to Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/style.css" />
 </head>
 <body>
     <!-- Instrucitons for game -->
@@ -19,18 +20,18 @@
     The value of each crystal is hidden from you until you click on it.<br>
     <br>
     Each time the games starts, the game will change the value of each crystal.</h5>
-   
+   <br>
     <!-- panel for random number -->
-    <h3 id="random-number"></h3>
+    <h3>Number: <span id="random-number"></h3><br>
     <!-- panel for wins/losses -->
-    <h3>Wins: <span id="wins"></span></h3>
-    <h3 id="losses"></h3>
+    <h3>Wins: <span id="wins"></span></h3><br>
+    <h3>Losses: <span id="losses"></h3><br>
     <!-- panel of crystals -->
-    <h3 id="crystal-one" class="crystal">1</h3>
-    <h3 id="crystal-two" class="crystal">2</h3>
-    <h3 id="crystal-three" class= "crystal">3</h3>
-    <h3 id="crystal-four" class="crystal">4</h3>
-    <!-- panel for score to equal random number -->
+    <img src="assets/images/images (1).png" id="crystal-one" class="crystal">
+    <img src="assets/images/images.png" id="crystal-two" class="crystal">
+    <img src="assets/images/images3.jpeg" id="crystal-three" class= "crystal">
+    <img src="assets/images/image5.jpg" height= 230px width=230px id="crystal-four" class="crystal">
+    <!-- panel for score to equal random number --><br>
     <h3>Your Score: <span id="score"></span></h3>
     
     <script src="assets/javascript/game.js"></script>

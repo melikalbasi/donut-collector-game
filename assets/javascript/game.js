@@ -16,8 +16,14 @@ $(document).ready(function() {
         crystalTwo = Math.floor(Math.random() * 11) + 1;
         crystalThree = Math.floor(Math.random() * 11) + 1;
         crystalFour = Math.floor(Math.random() * 11) + 1;
+        $("#crystal-one").attr("data-value", crystalOne);
+        $("#crystal-two").attr("data-value", crystalTwo);
+        $("#crystal-three").attr("data-value", crystalThree);
+        $("#crystal-four").attr("data-value", crystalFour);
         randomNumber = Math.floor(Math.random() * 120) + 1;
+        $("#random-number").text(randomNumber);
         scoreResult= 0;
+        $("score").text(scoreResult);
 
     }
 
@@ -30,6 +36,7 @@ $(document).ready(function() {
 
     $("#wins").text(wins);
     $("#losses").text(losses);
+    $("#random-number").text(randomNumber);
 
     // var startDisplay = function() {}
     function startDisplay() {
@@ -76,21 +83,6 @@ $(document).ready(function() {
         $("#losses").text(losses);
         
     })
-
-
-
- 
-
-    // games resets, wins and losses are still tracked
-
-   
-    
-
-
-
-
-
-
 
 
 });

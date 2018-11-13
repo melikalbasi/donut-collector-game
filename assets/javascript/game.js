@@ -23,7 +23,7 @@ $(document).ready(function() {
         randomNumber = Math.floor(Math.random() * 120) + 1;
         $("#random-number").text(randomNumber);
         scoreResult= 0;
-        $("score").text(scoreResult);
+        $("#score").text(scoreResult);
 
     }
 

@@ -56,9 +56,14 @@ $(document).ready(function() {
     $("#crystal-four").attr("data-value", crystalFour);
 
     // each click will add a number to result panel
-    $(".crystal").on("click", function() {
-       var currentClick = $(this).data("value");
-       scoreResult = currentClick + scoreResult;
+    // $(".crystal").on("click", function() {
+    //    var currentClick = $(this).data("value");
+    //    scoreResult = currentClick + scoreResult;
+
+    $(document).on("click", ".crystal", function() {
+        //the following two lines need to be updated
+          var currentClick = $(this).attr("data-value");
+          scoreResult += parseInt(currentClick);
         $("#score").text(scoreResult);
 
 

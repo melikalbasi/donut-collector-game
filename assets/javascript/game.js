@@ -12,16 +12,12 @@ $(document).ready(function() {
 
     // use a function to initialize game, and have it ready for reset
     function initializeGame() {
-        crystalOne = "";
-        crystalTwo = "";
-        crystalThree = "";
-        crystalFour = "";
-        wins = 0;
-        losses = 0;
-        randomNumber = "";
+        crystalOne = Math.floor(Math.random() * 11) + 1;
+        crystalTwo = Math.floor(Math.random() * 11) + 1;
+        crystalThree = Math.floor(Math.random() * 11) + 1;
+        crystalFour = Math.floor(Math.random() * 11) + 1;
+        randomNumber = Math.floor(Math.random() * 120) + 1;
         scoreResult= 0;
-
-        $("#wins", "#losses", "#score").empty();
 
     }
 
@@ -32,6 +28,10 @@ $(document).ready(function() {
 
     $("random-number").append(randomNumber);
 
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+
+    // var startDisplay = function() {}
     function startDisplay() {
         document.querySelector("random-number").textContent = randomNumber
     }
@@ -43,18 +43,43 @@ $(document).ready(function() {
     var crystalThree = Math.floor(Math.random() * 11) + 1;
     var crystalFour = Math.floor(Math.random() * 11) + 1;
 
+    $("#crystal-one").attr("data-value", crystalOne);
+    $("#crystal-two").attr("data-value", crystalTwo);
+    $("#crystal-three").attr("data-value", crystalThree);
+    $("#crystal-four").attr("data-value", crystalFour);
+
     // each click will add a number to result panel
-
-        // if a crystal is clicked  
-            // push value of crystal into score
-
-            // if another crystal is clicked
-                // push value of each crystal and add it to score
+    $(".crystal").on("click", function() {
+       var currentClick = $(this).data("value");
+       scoreResult = currentClick + scoreResult;
+        $("#score").text(scoreResult);
 
 
-    // when number matches, results in 1 win
+        // else when number matches, results in 1 win
+        if (scoreResult === randomNumber) {
+            wins++; 
+            alert("You win!");
+            initializeGame();
 
-    // if loss, losses increase by 1
+        }
+
+         // if user goes over randomNumber, losses increase by 1
+
+         if (scoreResult > randomNumber) {
+             losses++;
+             alert("You lost!");
+             initializeGame();
+         }
+
+          // display wins and losses
+        $("#wins").text(wins);
+        $("#losses").text(losses);
+        
+    })
+
+
+
+ 
 
     // games resets, wins and losses are still tracked
 

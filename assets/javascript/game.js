@@ -32,7 +32,7 @@ $(document).ready(function() {
     // randomly generate number displayed at start of game
     var randomNumber = Math.floor(Math.random() * 120) + 1;
 
-    $("random-number").append(randomNumber);
+    $("#random-number").append(randomNumber);
 
     $("#wins").text(wins);
     $("#losses").text(losses);
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     // var startDisplay = function() {}
     function startDisplay() {
-        document.querySelector("random-number").textContent = randomNumber
+        document.querySelector("#random-number").textContent = randomNumber
     }
 
 

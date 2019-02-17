@@ -19,7 +19,7 @@ Each time the games starts, the game will change the value of each donut.
 
 ## Deployment
 
-https://melikalbasi.github.io/unit-4-game/
+Play on a modern web browser or mobile. Launch the game [here](https://melikalbasi.github.io/donut-collector-game/).
 
 ## Built With
 

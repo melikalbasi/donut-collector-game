@@ -9,6 +9,7 @@ $(document).ready(function() {
     var losses = 0;
     var randomNumber = "";
     var scoreResult = 0;
+    var winOrLose = "";
 
     // use a function to initialize game, and have it ready for reset
     function initializeGame() {
@@ -22,9 +23,8 @@ $(document).ready(function() {
         $("#donut-four").attr("data-value", donutFour);
         randomNumber = Math.floor(Math.random() * 120) + 1;
         $("#random-number").text(randomNumber);
-        scoreResult= 0;
         $("#score").text(scoreResult);
-
+        $(".winOrLose").attr("data-value", winOrLose);
     }
 
     
@@ -32,16 +32,9 @@ $(document).ready(function() {
     // randomly generate number displayed at start of game
     var randomNumber = Math.floor(Math.random() * 120) + 1;
 
-    $("#random-number").append(randomNumber);
-
     $("#wins").text(wins);
     $("#losses").text(losses);
     $("#random-number").text(randomNumber);
-
-    // var startDisplay = function() {}
-    function startDisplay() {
-        document.querySelector("#random-number").textContent = randomNumber
-    }
 
 
     // randomly generate number for each donut (hidden)
@@ -55,13 +48,9 @@ $(document).ready(function() {
     $("#donut-three").attr("data-value", donutThree);
     $("#donut-four").attr("data-value", donutFour);
 
-    // each click will add a number to result panel
-    // $(".donut").on("click", function() {
-    //    var currentClick = $(this).data("value");
-    //    scoreResult = currentClick + scoreResult;
+
 
     $(document).on("click", ".donut", function() {
-        //the following two lines need to be updated
           var currentClick = $(this).attr("data-value");
           scoreResult += parseInt(currentClick);
         $("#score").text(scoreResult);
@@ -70,7 +59,7 @@ $(document).ready(function() {
         // else when number matches, results in 1 win
         if (scoreResult === randomNumber) {
             wins++; 
-            alert("You win!");
+            $(".winOrLose").text("You win!! Let's play again.")
             initializeGame();
 
         }
@@ -79,7 +68,7 @@ $(document).ready(function() {
 
          if (scoreResult > randomNumber) {
              losses++;
-             alert("You lost!");
+             $(".winOrLose").text("You lost! Try again.")
              initializeGame();
          }
 

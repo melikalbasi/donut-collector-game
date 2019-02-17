@@ -23,7 +23,9 @@ $(document).ready(function() {
         $("#donut-four").attr("data-value", donutFour);
         randomNumber = Math.floor(Math.random() * 120) + 1;
         $("#random-number").text(randomNumber);
+        scoreResult = 0;
         $("#score").text(scoreResult);
+        winOrLose = "Let's Play";
         $(".winOrLose").attr("data-value", winOrLose);
     }
 

@@ -1,10 +1,10 @@
 $(document).ready(function() { 
 
     // declare global variables
-    var crystalOne = 0;
-    var crystalTwo = 0;
-    var crystalThree = 0;
-    var crystalFour = 0;
+    var donutOne = 0;
+    var donutTwo = 0;
+    var donutThree = 0;
+    var donutFour = 0;
     var wins = 0;
     var losses = 0;
     var randomNumber = "";
@@ -12,14 +12,14 @@ $(document).ready(function() {
 
     // use a function to initialize game, and have it ready for reset
     function initializeGame() {
-        crystalOne = Math.floor(Math.random() * 11) + 1;
-        crystalTwo = Math.floor(Math.random() * 11) + 1;
-        crystalThree = Math.floor(Math.random() * 11) + 1;
-        crystalFour = Math.floor(Math.random() * 11) + 1;
-        $("#crystal-one").attr("data-value", crystalOne);
-        $("#crystal-two").attr("data-value", crystalTwo);
-        $("#crystal-three").attr("data-value", crystalThree);
-        $("#crystal-four").attr("data-value", crystalFour);
+        donutOne = Math.floor(Math.random() * 11) + 1;
+        donutTwo = Math.floor(Math.random() * 11) + 1;
+        donutThree = Math.floor(Math.random() * 11) + 1;
+        donutFour = Math.floor(Math.random() * 11) + 1;
+        $("#donut-one").attr("data-value", donutOne);
+        $("#donut-two").attr("data-value", donutTwo);
+        $("#donut-three").attr("data-value", donutThree);
+        $("#donut-four").attr("data-value", donutFour);
         randomNumber = Math.floor(Math.random() * 120) + 1;
         $("#random-number").text(randomNumber);
         scoreResult= 0;
@@ -44,23 +44,23 @@ $(document).ready(function() {
     }
 
 
-    // randomly generate number for each crystal (hidden)
-    var crystalOne = Math.floor(Math.random() * 11) + 1;
-    var crystalTwo = Math.floor(Math.random() * 11) + 1;
-    var crystalThree = Math.floor(Math.random() * 11) + 1;
-    var crystalFour = Math.floor(Math.random() * 11) + 1;
+    // randomly generate number for each donut (hidden)
+    var donutOne = Math.floor(Math.random() * 11) + 1;
+    var donutTwo = Math.floor(Math.random() * 11) + 1;
+    var donutThree = Math.floor(Math.random() * 11) + 1;
+    var donutFour = Math.floor(Math.random() * 11) + 1;
 
-    $("#crystal-one").attr("data-value", crystalOne);
-    $("#crystal-two").attr("data-value", crystalTwo);
-    $("#crystal-three").attr("data-value", crystalThree);
-    $("#crystal-four").attr("data-value", crystalFour);
+    $("#donut-one").attr("data-value", donutOne);
+    $("#donut-two").attr("data-value", donutTwo);
+    $("#donut-three").attr("data-value", donutThree);
+    $("#donut-four").attr("data-value", donutFour);
 
     // each click will add a number to result panel
-    // $(".crystal").on("click", function() {
+    // $(".donut").on("click", function() {
     //    var currentClick = $(this).data("value");
     //    scoreResult = currentClick + scoreResult;
 
-    $(document).on("click", ".crystal", function() {
+    $(document).on("click", ".donut", function() {
         //the following two lines need to be updated
           var currentClick = $(this).attr("data-value");
           scoreResult += parseInt(currentClick);

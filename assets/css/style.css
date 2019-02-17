@@ -1,13 +1,27 @@
 body {
-    background-image: url(../../assets/images/background-15226_960_720.jpg);
+  background-image: url(../../assets/images/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-h3 {
-    background-color: pink;
-    display: inline;
+h1 {
+  color:  #ec716f99;
+  font-family: 'Pacifico', cursive;
 }
 
-h5 {
-    background-color: darkseagreen;
-    display: inline;
+.rules {
+  padding: 30px 19px;
+  font-family: 'Comfortaa', cursive;
+  color:  #ec716f99;
+  border: 3px solid lightgrey;
+  background: lightgrey;
+  opacity: .8;
+  font-weight: bold;
+}
+
+
+.game {
+  font-family: 'Pacifico', cursive;
+  color: #ec716f99;
+  font-size: 1.5rem;
 }

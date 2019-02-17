@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title>Donut Collector</title>
-    <!-- link to jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- link to Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/style.css" />
+  <meta charset="utf-8" />
+  <title>Donut Collector</title>
+  <!-- link to jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- link to Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Pacifico|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="../unit-4-game/assets/css/style.css" />
 </head>
+
 <body>
-    <!-- Instrucitons for game -->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-10">
-            <h5><h5>Donut Collector Rules!<br>
-            <br>
-            You will be given a random number at the start of the game.<br>
-            <br>
-            There are four donuts below. By clicking on a donut, you will add a specific amount of points to your total score.<br>
-            <br>
-            You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.<br>
-            <br>
-            The value of each donut is hidden from you until you click on it.<br>
-            <br>
-            Each time the games starts, the game will change the value of each donut.</h5>
-            <br>
-            <!-- panel for random number -->
-            <h3>Number: <span id="random-number"></h3><br>
-            <!-- panel for wins/losses -->
-            <h3>Wins: <span id="wins"></span></h3><br>
-            <h3>Losses: <span id="losses"></h3><br>
-            <!-- panel of crystals -->
-            <img src="assets/images/images (1).png" id="crystal-one" class="crystal">
-            <img src="assets/images/images.png" id="crystal-two" class="crystal">
-            <img src="assets/images/images3.jpeg" id="crystal-three" class= "crystal">
-            <img src="assets/images/image5.jpg" height= 230px width=230px id="crystal-four" class="crystal">
-            <!-- panel for score to equal random number --><br>
-            <h3>Your Score: <span id="score"></span></h3>
-            
-    <script src="assets/javascript/game.js"></script>
+  <!-- Instrucitons for game -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mt-4 rules">
+        <h1><i>Donut Collector!</i></h1>
+        <br>
+        <h5><u><i>Rules:</i></u></h5>
+        <br>
+        You will be given a random number at the start of the game.<br>
+        <br>
+        There are four donuts below. By clicking on a donut, you will add a specific amount of points to your total
+        score.<br>
+        <br>
+        You win the game by matching your total score to the random number. You lose the game if your total score goes
+        above the random number.<br>
+        <br>
+        The value of each donut is hidden from you until you click on it.<br>
+        <br>
+        Each time the games starts, the game will change the value of each donut.</h5>
+        <br>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6 mt-4 game">
+        <!-- panel for wins/losses -->
+        <p>Wins: <span id="wins"></span></p>
+        <p>Losses: <span id="losses"></p>
+        <!-- panel for random number and score -->
+        <p>Your Number: <span id="score"></span></p>
+        <p>Number To Hit: <span id="random-number"></p>
+        <p class="winOrLose"></p>
+          <br>
+        <!-- panel of crystals -->
+        <img src="assets/images/donut1.png" height=200px width=200px id="donut-one" class="donut">
+        <img src="assets/images/donut2.png" height=200px width=200px id="donut-two" class="donut">
+        <img src="assets/images/donut3.png" height=200px width=200px id="donut-three" class="donut">
+        <img src="assets/images/donut4.png" height=250px width=250px id="donut-four" class="donut">
+        <!-- panel for score to equal random number -->
+      </div>
+
+      <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>

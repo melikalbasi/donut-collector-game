@@ -1,10 +1,10 @@
-# Donut Collector
+# Donut Collector :doughnut:
 
 Collect the right donuts to win the game! Each  donut has a hidden value. The goal of the game is to use your analytical skills to add the value of your donuts to equal the number populated by the page. 
 
 ![DonutCollector](assets/images/donutcollector.gif)
 
-### Rules
+### Rules :sparkles:
 
 * You will be given a random number at the start of the game.
 
